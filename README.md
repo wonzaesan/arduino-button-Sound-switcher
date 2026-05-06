@@ -1,2 +1,28 @@
-# TheShy-classic-voice-button-Sound-switcher
-基于arduino的一个发声装置。
+# arduino-button-Sound-switcher
+## 简介
+这是一个基于arduino制作的简单发声装置，可以通过按键切换三种不同的音频。
+## 硬件清单
+|元件|规格|数量|
+|----|----|----| 
+|开发板|arduino uno改良版|1
+|杜邦线| 公对公，母对母 |若干条
+|DFPlayer mini模块||1
+|按键开关||1
+喇叭||1
+面包板||1
+sd卡||1
+## 接线方式
+gnd<-按键开关->2
+#### DFPlayer mini模块部分（视实际购买的商家提供的硬件说明为准，这里vcc为左侧，busy为右侧）
+rx<-10,11->tx
+5v<-vcc
+gnd->gnd
+#### 喇叭
+两根线分别->dfplayer的spk1,spk2
+## 功能说明
+按第一次：播放第一种音频；
+按第二次：播放第二种音频；
+按第三次：播放第三种音频。（这里由于*delay(300);*不能通过提前通过多按几次来切换音频）
+## 作者
+wonzaesan - 2026
+
